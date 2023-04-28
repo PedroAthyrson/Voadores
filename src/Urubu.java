@@ -1,8 +1,15 @@
 public class Urubu implements Voador{
 
-    public void comeAnimalMorto() {
-        System.out.println("Come a carcaça, urubu!");
+    private boolean encontrouAnimaisMortos = false;
+
+    public void comerCarcaça(){
+        encontrouAnimaisMortos = true;
     }
+
+    public boolean isEncontrouAnimaisMortos() {
+        return encontrouAnimaisMortos;
+    }
+
     @Override
     public double voar() {
         System.out.println("Voa, voa, urubu!");
